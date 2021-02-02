@@ -1,4 +1,6 @@
-/* Takes in a number of seconds and converts it to hours, minutes and seconds. */
+/**
+ * Takes in a number of seconds and converts it to hours, minutes and seconds.
+ */
 public class Time {
     public static void main(String[] args) {
         System.out.println("\nEnter a number of seconds: ");

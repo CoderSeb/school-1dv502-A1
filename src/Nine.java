@@ -1,3 +1,6 @@
+/**
+ * Dice game to get as close to 9 as possible with up to two dice rolls.
+ */
 public class Nine {
   public static void main(String[] args) {
     int playerResult = 0;
@@ -26,11 +29,24 @@ public class Nine {
     }
   }
 
+  /**
+   * Rolls a dice.
+   *
+   * @return a random integer between 1 and 6.
+   */
   private static int diceRoll() {
     int diceRoll = (int) (Math.random() * 6 + 1);
     return diceRoll;
   }
 
+  /**
+   * Compares two integers as the player and computer results and returns a string
+   * depending on which participant has won.
+   *
+   * @param playerResult   as the player result.
+   * @param computerResult as the computer result.
+   * @return a string.
+   */
   private static String checkWinner(int playerResult, int computerResult) {
     if ((playerResult < 10 && playerResult > computerResult) || (playerResult < 10 && computerResult > 9)) {
       return "You won!!";

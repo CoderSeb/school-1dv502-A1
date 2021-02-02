@@ -1,3 +1,7 @@
+/**
+ * Calculates the amount of days it will take to earn a given amount of money if
+ * the salary is exponential each day.
+ */
 public class DangerousWork {
   public static void main(String[] args) {
     System.out.println("How much would you like to earn?");
@@ -8,9 +12,15 @@ public class DangerousWork {
     } else {
       System.out.print("Oh no! You died on day " + days + ".");
     }
-
   }
 
+  /**
+   * Takes in the amount of money to be earned and calculates the amount of days
+   * it would take.
+   *
+   * @param moneyToBeMade as the amount of money to earn.
+   * @return the amount of days to earn the given amount.
+   */
   static int moneyMaker(String moneyToBeMade) {
     int moneyToMake = Integer.parseInt(moneyToBeMade);
     int maximumDays = 30;
