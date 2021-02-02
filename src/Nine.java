@@ -17,9 +17,11 @@ public class Nine {
         System.out.println("You got " + playerResult);
       }
       computerResult = diceRoll();
-      System.out.println("Computer got " + computerResult + " on the first roll.");
-      computerResult += diceRoll();
-      System.out.println("Computer rolls again and gets a total of " + computerResult);
+      System.out.println("Computer rolls " + computerResult);
+      if (computerResult < 5) {
+        computerResult += diceRoll();
+        System.out.println("Computer rolls again and gets a total of " + computerResult);
+      }
       System.out.println(checkWinner(playerResult, computerResult));
     }
   }
