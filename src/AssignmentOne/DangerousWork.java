@@ -1,17 +1,23 @@
+package AssignmentOne;
+
+import java.util.Scanner;
+
 /**
  * Calculates the amount of days it will take to earn a given amount of money if
  * the salary is exponential each day.
  */
 public class DangerousWork {
   public static void main(String[] args) {
+    Scanner myScanner = new Scanner(System.in);
     System.out.println("How much would you like to earn?");
-    String moneyToBeMade = System.console().readLine();
+    String moneyToBeMade = myScanner.nextLine();
     int days = moneyMaker(moneyToBeMade);
     if (days < 31) {
       System.out.print("You will have your money in " + days + " days.");
     } else {
       System.out.print("Oh no! You died on day " + days + ".");
     }
+    myScanner.close();
   }
 
   /**

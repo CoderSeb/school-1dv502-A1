@@ -1,18 +1,23 @@
+package AssignmentOne;
+
+import java.util.Scanner;
+
 /**
  * Dice game to get as close to 9 as possible with up to two dice rolls.
  */
 public class Nine {
   public static void main(String[] args) {
+    Scanner myScanner = new Scanner(System.in);
     int playerResult = 0;
     int computerResult = 0;
     System.out.print("\nPlaying a game\n====================\n");
     System.out.print("Ready to play? (Y/N) ");
-    String firstRoll = System.console().readLine();
+    String firstRoll = myScanner.nextLine();
     if (firstRoll.equals("Y")) {
       playerResult = diceRoll();
       System.out
           .print("You got " + playerResult + " on the first dice.\nWould you like to roll the second dice? (Y/N) ");
-      String secondRoll = System.console().readLine();
+      String secondRoll = myScanner.nextLine();
       if (secondRoll.equals("Y")) {
         playerResult += diceRoll();
         System.out.println("You got a total of " + playerResult);
@@ -27,6 +32,7 @@ public class Nine {
       }
       System.out.println(checkWinner(playerResult, computerResult));
     }
+    myScanner.close();
   }
 
   /**

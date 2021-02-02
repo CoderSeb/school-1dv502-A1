@@ -1,10 +1,15 @@
+package AssignmentOne;
+
+import java.util.Scanner;
+
 /**
  * Creates a diamond with the height chosen.
  */
 public class Diamonds {
   public static void main(String[] args) {
+    Scanner myScanner = new Scanner(System.in);
     System.out.print("Give a positive number: ");
-    String strNumber = System.console().readLine();
+    String strNumber = myScanner.nextLine();
     int positiveNumber = Integer.parseInt(strNumber);
     int empty = positiveNumber - 1;
     for (int i = 0; i < positiveNumber; i++) {
@@ -28,5 +33,6 @@ public class Diamonds {
       }
       System.out.println("");
     }
+    myScanner.close();
   }
 }
