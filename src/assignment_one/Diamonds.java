@@ -9,8 +9,7 @@ public class Diamonds {
   public static void main(String[] args) {
     Scanner myScanner = new Scanner(System.in);
     System.out.print("Give a positive number: ");
-    String strNumber = myScanner.nextLine();
-    int positiveNumber = Integer.parseInt(strNumber);
+    int positiveNumber = myScanner.nextInt();
     int empty = positiveNumber - 1;
     for (int i = 0; i < positiveNumber; i++) {
       for (int j = 0; j < empty; j++) {
