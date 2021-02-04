@@ -77,6 +77,6 @@ public class GameSRP {
    * @return The random integer.
    */
   public static int randomNumber(int min, int max) {
-    return (int) ((Math.random() * (max - min)) + min);
+    return (int) ((Math.random() * ((max + 1) - min)) + min);
   }
 }
